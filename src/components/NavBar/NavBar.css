@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #446cbb !important;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(88, 155, 255, 0.1);
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.navbar-title {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-button {
+    color: white !important;
+    text-transform: none !important;
+}
+
+.spacer {
+    margin-top: 80px;
+}

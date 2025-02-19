@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px; 
+}
+
+h2 {
+    font-size: 2rem; 
+    text-align: center;
+}
