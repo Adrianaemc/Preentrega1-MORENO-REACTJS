@@ -1,0 +1,79 @@
+/* Contenedor principal para el detalle del producto */
+.item-detail-container {
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para el contenedor de los detalles */
+.item-detail {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+/* Estilo para la imagen del producto */
+.item-detail-image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Estilo para la sección de información del producto */
+.item-detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* Estilo para el título del producto */
+.item-detail h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo para la descripción del producto */
+.item-detail p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el precio del producto */
+.item-detail .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Botón de "Añadir al carrito" */
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+

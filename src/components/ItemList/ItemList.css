@@ -1,0 +1,50 @@
+/* Estilo general del contenedor de productos */
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Estilo individual para cada tarjeta de producto */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para la imagen del producto */
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Estilo para el precio del producto */
+.price {
+    color: #130066;
+    font-size: 18px;
+}
+
+/* Estilos del contador */
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Estilo del botón de ver detalle */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}

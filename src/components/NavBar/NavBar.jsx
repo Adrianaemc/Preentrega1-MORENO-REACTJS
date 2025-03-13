@@ -1,68 +1,25 @@
-import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, Menu, MenuItem, Container } from "@mui/material";
-import CartWidget from "../cartWidget/cartWidget";
-import "./NavBar.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const NavBar = () => {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [openCategory, setOpenCategory] = useState(null);
-
-    const handleClick = (event, category) => {
-        setAnchorEl(event.currentTarget);
-        setOpenCategory(category);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-        setOpenCategory(null);
-    };
-
-    const categories = [
-        { name: "Tecnología", subcategories: ["Celulares", "Tabletas"] },
-        { name: "Oficina", subcategories: ["Sillas", "Escritorios"] },
-    ];
-
+const Navbar = () => {
     return (
-        <>
-            <AppBar position="fixed" className="navbar">
-                <Container>
-                    <Toolbar className="toolbar">
-                        <Typography variant="h6" className="navbar-title" style={{ fontSize: "2rem" }}>
-                            OFICENTER
-                        </Typography>
-
-                        {categories.map((category, index) => (
-                            <div key={index}>
-                                <Button
-                                    className="navbar-button"
-                                    onClick={(event) => handleClick(event, category.name)}
-                                    style={{ fontSize: "1.2rem" }}
-                                >
-                                    {category.name}
-                                </Button>
-                                <Menu
-                                    anchorEl={anchorEl}
-                                    open={openCategory === category.name}
-                                    onClose={handleClose}
-                                >
-                                    {category.subcategories.map((sub, subIndex) => (
-                                        <MenuItem key={subIndex} onClick={handleClose}>
-                                            {sub}
-                                        </MenuItem>
-                                    ))}
-                                </Menu>
-                            </div>
-                        ))}
-
-                        <CartWidget />
-                    </Toolbar>
-                </Container>
-            </AppBar>
-
-            {/* Margen para que el contenido no quede tapado */}
-            <div className="spacer"></div>
-        </>
+        <nav className="NavBar">
+            <div className="navbar-container">
+                <h1>
+                    <Link to="/" className="navbar-logo">ARCLOTHING</Link>
+                </h1>
+                <ul className="navbar-menu">
+                    <li className="navbar-item">
+                        <Link to="/category/women" className="navbar-link">Ropa de Mujer</Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link to="/category/men" className="navbar-link">Ropa de Hombre</Link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     );
 };
 
-export default NavBar;
+export default Navbar;
